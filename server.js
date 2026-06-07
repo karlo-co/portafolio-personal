@@ -11,14 +11,6 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
-app.get('/proyectos', (req, res) => {
-  res.sendFile(__dirname + '/public/proyectos.html');
-});
-
-app.get('/contacto', (req, res) => {
-  res.sendFile(__dirname + '/public/contacto.html');
-});
-
 app.post('/api/contacto', async (req, res) => {
   try {
     const { nombre, email, mensaje } = req.body;
